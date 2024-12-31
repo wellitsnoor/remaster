@@ -22,6 +22,8 @@ export default function Home() {
   };
 
   useEffect(() => {
+    fetchTasks();
+
     const interval = setInterval(() => {
       fetchTasks();
     }, 5000); // 5000 milliseconds = 5 seconds
