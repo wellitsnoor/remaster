@@ -6,7 +6,8 @@ const todoSchema = new Schema({
   title: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
+    match: /^.{1,30}$/
   },
   isCompleted: {
     type: Boolean,

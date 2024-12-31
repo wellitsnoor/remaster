@@ -22,7 +22,12 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetchTasks();
+    const interval = setInterval(() => {
+      fetchTasks();
+    }, 5000); // 5000 milliseconds = 5 seconds
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -217,7 +222,6 @@ export default function Home() {
           scale: 1,
           opacity: 1,
         }}
-        
         className="flex flex-col w-fit m-auto text-center"
       >
         <h1 className="text-6xl font-bold">Add a Task</h1>
