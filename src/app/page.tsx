@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function page() {
   return (
-    <div className="w-fit h-fit fixed top-0 bottom-0 right-0 left-0 m-auto text-center justify-center items-center flex remaster text-remaster">
+    <div className="w-screen h-screen bg-black fixed top-0 bottom-0 right-0 left-0 m-auto text-center justify-center items-center flex flex-col remaster">
       {["R", "E", "M", "A", "S", "T", "E", "R"].map((letter, index) => (
         <motion.div
           key={index}
@@ -19,11 +19,15 @@ export default function page() {
             repeatType: "mirror",
             repeatDelay: 0,
           }}
-          className="text-5xl font-bold text-red-700"
+          className="md:text-7xl text-5xl font-bold text-remaster"
         >
           {letter}
         </motion.div>
       ))}
+      <div className="absolute bottom-0 text-remaster mb-10">
+        {" "}
+        <p className="text-remaster opacity-50">coming soon</p>
+      </div>
     </div>
   );
 }
