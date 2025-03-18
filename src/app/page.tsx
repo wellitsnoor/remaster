@@ -1,10 +1,29 @@
+"use client";
+
 import React from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function page() {
   return (
-    <div className="flex m-auto justify-center items-center h-screen">
-      <p className="text-5xl font-bold text-remaster">REMASTER</p>
+    <div className="w-fit h-fit fixed top-0 bottom-0 right-0 left-0 m-auto text-center justify-center items-center flex remaster text-remaster">
+      {["R", "E", "M", "A", "S", "T", "E", "R"].map((letter, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: (index + 1) * 0.1,
+            repeat: Infinity,
+            repeatType: "mirror",
+            repeatDelay: 0,
+          }}
+          className="text-5xl font-bold text-red-700"
+        >
+          {letter}
+        </motion.div>
+      ))}
     </div>
   );
 }
