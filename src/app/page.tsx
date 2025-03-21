@@ -19,7 +19,7 @@ export default function page() {
             repeatType: "mirror",
             repeatDelay: 0,
           }}
-          className="md:text-7xl text-5xl font-bold text-remaster"
+          className="2xl:text-7xl md:text-6xl text-5xl font-bold text-remaster"
         >
           {letter}
         </motion.div>
