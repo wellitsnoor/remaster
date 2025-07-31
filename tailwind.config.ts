@@ -12,7 +12,6 @@ export default {
         background: "var(--background)",
         remaster: "#fd1b00",
         foreground: "var(--foreground)",
-        remaster: "#fd1b00",
       },
     },
   },
