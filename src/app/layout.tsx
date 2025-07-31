@@ -4,11 +4,8 @@ import Provider from "@/libs/Provider"; // Import QueryProvider
 import { Inter } from "next/font/google";
 import Player from "@/components/Player";
 
-<<<<<<< HEAD
-=======
 const inter = Inter({ subsets: ["latin"] });
 
->>>>>>> beta
 export const metadata: Metadata = {
   title: {
     template: "%s",
@@ -27,20 +24,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <head>
-        <link rel="icon" href="/faviconreal.png" type="image/x-icon" />
-      </head>
-
-      <body>{children}</body>
-=======
       <body className={`${inter.className} antialiased`}>
         <Provider>
           {children}
           <Player />
         </Provider>
       </body>
->>>>>>> beta
     </html>
   );
 }
